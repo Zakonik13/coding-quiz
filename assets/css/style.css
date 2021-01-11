@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header h3 {
+    padding: 2% 40% 0% 5%;
+}
+
+header p {    
+    padding: 2% 5% 0% 40%;
+}
+
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    padding: 3% 20% 5% 20%;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 10%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
