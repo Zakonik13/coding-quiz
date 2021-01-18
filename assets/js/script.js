@@ -41,9 +41,7 @@ let beginTimer = function() {
             end();
             alert("Time is up!");
         }
-        
     }
-
 
     let timeInterval = setInterval(countdown, 1000); 
     let endTimer = function() {
@@ -69,21 +67,16 @@ let q1 = function() {
     let c = document.getElementById("c");
     let d = document.getElementById("d");
     
+    let yourAnswer = function() {
+        wrongAnswer();
+        timerPenalty();
+        q2();            
+    }
 
-    // function selectOne() {
-        let yourAnswer = function() {
-            wrongAnswer();
-            timerPenalty();
-            q2();            
-        }
-
-        a.addEventListener("click", yourAnswer);
-        b.addEventListener("click", yourAnswer);
-        c.addEventListener("click", q2);
-        d.addEventListener("click", yourAnswer);
-    // }
-
-    // selectOne();      
+    a.addEventListener("click", yourAnswer);
+    b.addEventListener("click", yourAnswer);
+    c.addEventListener("click", q2);
+    d.addEventListener("click", yourAnswer);     
 } 
 
 // Display second question and answer choices
@@ -100,20 +93,16 @@ let q2 = function() {
     let g = document.getElementById("g");
     let h = document.getElementById("h");
 
-    // function selectTwo() {
-        let yourAnswer = function() {
-            wrongAnswer();
-            timerPenalty();
-            q3();
-        }
+    let yourAnswer = function() {
+        wrongAnswer();
+        timerPenalty();
+        q3();
+    }
 
-        e.addEventListener("click", yourAnswer);
-        f.addEventListener("click", q3);
-        g.addEventListener("click", yourAnswer);
-        h.addEventListener("click", yourAnswer);
-    // }
-
-    // selectTwo();  
+    e.addEventListener("click", yourAnswer);
+    f.addEventListener("click", q3);
+    g.addEventListener("click", yourAnswer);
+    h.addEventListener("click", yourAnswer);  
 } 
 
 // Display third question and answer choices
@@ -130,21 +119,16 @@ let q3 = function() {
     let k = document.getElementById("k");
     let l = document.getElementById("l");
 
+    let yourAnswer = function() {
+        wrongAnswer();
+        timerPenalty();
+        q4();
+    }
 
-    // function selectThree() {
-        let yourAnswer = function() {
-            wrongAnswer();
-            timerPenalty();
-            q4();
-        }
-
-        i.addEventListener("click", yourAnswer);
-        j.addEventListener("click", yourAnswer);
-        k.addEventListener("click", yourAnswer);
-        l.addEventListener("click", q4);
-    // }
-
-    // selectThree(); 
+    i.addEventListener("click", yourAnswer);
+    j.addEventListener("click", yourAnswer);
+    k.addEventListener("click", yourAnswer);
+    l.addEventListener("click", q4);
 }
 
 // Display fourth question and answer choices
@@ -161,21 +145,17 @@ let q4 = function() {
     let o = document.getElementById("o");
     let p = document.getElementById("p");
 
+    let yourAnswer = function() {
+        wrongAnswer();
+        timerPenalty();
+        end();
+    }
 
-    // function selectFour() {
-        let yourAnswer = function() {
-            wrongAnswer();
-            timerPenalty();
-            end();
-        }
-
-        m.addEventListener("click", yourAnswer);
-        n.addEventListener("click", end);
-        o.addEventListener("click", yourAnswer);
-        p.addEventListener("click", yourAnswer);
-    // }
-
-    // selectFour();   
+    m.addEventListener("click", yourAnswer);
+    n.addEventListener("click", end);
+    o.addEventListener("click", yourAnswer);
+    p.addEventListener("click", yourAnswer);
+      
 }
 
 // End of quiz - Displays Score and Form
@@ -186,17 +166,11 @@ let end = function() {
     let finalScore = document.getElementById('your-score-txt');
     finalScore.textContent = "Your Score:" + " " + score;
     let theForm = document.getElementById('the-form');
-    
-    
-    
-    
 
     let results = function() {
 
         savedName = document.getElementById('yourtext').value;
         savedScore = score;
-
-       
            
         // savedNames.push("" + savedName);
         // savedScores.push("" + savedScore);
@@ -207,10 +181,8 @@ let end = function() {
         // let submitBtn = document.getElementById("submit-me")
         // submitBtn.addEventListener("click", showScore);
 
-        showScore();
-        
+        showScore();  
     }
-    
     
     // Stops timer if quiz is complete before time runs out
     if (timer > 0) {
@@ -233,30 +205,11 @@ let showScore = function() {
     displayScores = localStorage.getItem('name');
     storedScores.innerHTML = "<li>" + displayScores + "</li>";
     storedNames.innerHTML = "<li>" + displayNames + "</li>";
-    // let storedNames = document.getElementById("stored-names");
-    // let storedScores = document.getElementById("stored-scores");
-    
-    // let displayScores = localStorage.getItem('name');
-    // let displayNames = localStorage.getItem('score');
-    // storedNames.textContent = displayNames;
-    // storedScores.textContent = displayScores;
-    // form.appendChild(allScores);
-    // console.log(allScores);
 
     console.log(displayScores);
     console.log(displayNames);
 }
 
-let pullData = function() {
-    // let storedNames = document.getElementById("stored-names");
-    // let storedScores = document.getElementById("stored-scores");
-    // displayScores = localStorage.getItem('name');
-    // displayNames = localStorage.getItem('score');
-    // storedNames.textContent = displayNames;
-    // storedScores.textContent = displayScores;
-}
-
-
-pullData();
 
 start.onclick = beginTimer;
+document.getElementById('high-scores').onclick = showScore;

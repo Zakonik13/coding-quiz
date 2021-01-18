@@ -25,6 +25,12 @@ header {
     border-bottom: groove;
 }
 
+h3:hover {
+    background-color:  #cebe92;
+    border: groove;
+    cursor: pointer;
+}
+
 header h1 {
     display: flex;
     justify-content: center;
