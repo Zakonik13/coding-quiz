@@ -4,12 +4,8 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    
+    display: block;
+    height: 560px;
 }
 
 .inline {
@@ -18,31 +14,137 @@ header {
     justify-content: space-evenly;
 }
 
-header h3 {
-    padding: 2% 40% 0% 5%;
+.inline p {    
+    padding: 2% 0% 0% 80%;
 }
 
-header p {    
-    padding: 2% 5% 0% 40%;
+header {
+    height: 30%;
+    background-color: #00ff9d;
+    padding: 0% 0% 4% 0%;
+    border-bottom: groove;
 }
-
 
 header h1 {
     display: flex;
     justify-content: center;
-    padding: 3% 20% 5% 20%;
+    padding: 0.5% 20%;
+}
+
+header button {
+    width: 8%;
+    background-color:  #cebe92;
+}
+
+.start-cmd {
+    display: flex;
+    justify-content: center;
 }
 
 .start {
     display: flex;
     justify-content: center;
+    height: 20%;
+    padding: 1%;
 }
 
 main {
-    padding: 10%;
+    padding: 2% 0 0 0;
+    height: 70%;
 }
 
-ul {
+section form {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    background-color: #00ff9d;
+    height: 25%;
+}
+
+form label {
+    font-size: x-large;
+    font-weight: 1000;
+    padding: 0 8% 0 0;
+}
+
+input {
+    height: 60%;
+    width: 40%;
+}
+
+#submit-me {
+    height: 68%;
+    width: 15%;
+    background-color: #cebe92;
+}
+
+header button {
+    height: 68%;
+    width: 15%;
+    background-color: #cebe92;
+}
+
+section {
+    display: block;
+    justify-content: center;
+    height: 100%;
+}
+
+section h3 {
+    display: flex;
+    justify-content: center;
+    padding: 1% 0 0 0;
+}
+
+main ul {
+    height: 80%;
+    padding: 3% 0 0 0;
+}
+
+main li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 15%;
+    padding: 1%;
+}
+
+main button {
+    background-color: #00ff9d;
+    color: #000000;
+    height: 100%;
+    width: 30%;
+}
+
+#all-scores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#all-scores h1 {
+    display: flex;
+    justify-content: center;
+    margin: 20% 0 2% 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 25% 0 25%;
+    height: 20%;
+}
+
+.username {
+    width: 1%;
+    margin: 0 3% 0 3%;
+    list-style: none;
+}
+
+.userscore {
+    list-style: none;
+    width: 1%;
+    padding: 0 3% 0 3%;
 }

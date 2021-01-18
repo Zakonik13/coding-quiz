@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Coding Quiz</title>
-</head>
-<body>
-    <header>
-        <!-- High Scores link, Timer, Start button and Score/Initials-Form -->
-        <div class="inline">
-            <h3 class="high-scores" id="high-scores">High Scores</h3>
-            <p id="timer">Time:60</p>
-        </div>
-        <h1>Coding Quiz</h1>
-        <p>Press the Start button to begin</p>
-        
-        <div class="start" >
-            <button id="start">Start</button>
-        </div>
-    </header>
-    <main>
-        <!-- Form and Buttons -->
-        <ul class="q1" id="q1"><p>What is this?</p>
-            <!-- <li>wrong</li>
-            <li>wrong</li>
-            <li>right</li>
-            <li>wrong</li> -->
-        </ul>
-        <ul class="q2" id="q2"><p>What is there?</p>
-            <!-- <li>right</li>
-            <li>wrong</li>
-            <li>wrong</li>
-            <li>wrong</li> -->
-        </ul>
-        <ul class="q3" id="q3"><p>What is that?</p>
-            <!-- <li>wrong</li>
-            <li>wrong</li>
-            <li>wrong</li>
-            <li>right</li> -->
-        </ul>
-    </main>
-    <script src="./assets/js/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <title>Coding Quiz</title>
+    </head>
+    <body id="the-body">
+        <header>
+            <section id="form">
+                <!-- High Scores link, Timer, Start button and Score/Initials-Form -->
+                <div class="inline">
+                    <h3 class="high-scores" id="high-scores"><a href="scores.html">High Scores</a></h3>
+                    <p id="timer">Time:60</p>
+                </div>
+                <h1>Coding Quiz</h1>
+                <p class="start-cmd">Press the Start button to begin</p>
+                
+                <div class="start" id="reset">
+                    <button id="start">Start</button>
+                </div>
+            </section>
+        </header>
+        <!-- Where Form, Questions, and Answers will go -->
+        <main>
+            <section class="question1 btn-format" id="options">
+                <h3 id="question1"></h3>
+                <ul id="press">
+                    <li class="answer" id="1"></li>
+                    <li class="answer" id="2"></li>
+                    <li class="answer" id="3"></li>
+                    <li class="answer" id="4"></li>
+                </ul>
+            </section>
+        </main>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
